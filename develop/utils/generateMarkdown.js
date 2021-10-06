@@ -12,7 +12,7 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license !== "None") {
-    return `https://spb71.mit-license.org/`
+    return `https://opensource.org/licenses/${license}`
   } else {
     return ``
   }
@@ -23,9 +23,8 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
   if (license !== "None") {
     return `# License
-    
-    The license is covered under ${license}. Link to user license is below.
-    ${renderLicenseLink(license)}`
+The license is covered under ${license}. Link to user license is below.
+${renderLicenseLink(license)}`
   } else {
     return ``
   }
@@ -38,21 +37,20 @@ function generateMarkdown(data) {
   ${renderLicenseBadge(data.license)}
   
   # Title
-  ## ${data.title}
+  #### ${data.title}
 
   # Description
   ${data.description}
 
   # Table of Contents
 
-  [Title](#title)
-  [Description](#description)
-  [Installation](#installation) 
-  [Usage](#usage)
-  [License](#license)
-  [Contributing](#contributing)
-  [Tests](#tests)
-  [Questions](#questions)
+  - [Title](#title)   
+  - [Description](#description)  
+  - [Installation](#installation)  
+  - [Usage](#usage)  
+  - [Contributing](#contributing)  
+  - [Tests](#tests)  
+  - [Questions](#questions)  
 
   # Installation
 
@@ -74,8 +72,8 @@ function generateMarkdown(data) {
 
   # Questions
   
-  My work on Github: [github link](https://github.com/${data.github})
-  Contact via Email: ${data.email}
+  - My work on Github: [github link](https://github.com/${data.github})
+  - Contact via Email: ${data.email}
 `;
 }
 

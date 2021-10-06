@@ -6,48 +6,57 @@ const generateMarkdown = require('./utils/generateMarkdown');
 const questions = [{
     type: 'input',
     name: 'title',
-    question: 'What is the title of your project?',
+    message: 'What is the title of your project?',
+    default: 'My README',
 },
 {
     type: 'input',
     name: 'description',
-    question: 'Please provide a description of your project.',
+    message: 'Please provide a description of your project.',
+    default: 'This is an initial README file.',
 },
 {
     type: 'input',
     name: 'installation',
-    question: 'What are the instructions for installing this project',
+    message: 'What are the instructions for installing this project?',
+    default: 'Clone the repo to your local machine.'
 },
 {
     type: 'input',
     name: 'usage',
-    question: 'What will be the application be used for?',
+    message: 'What will be the application be used for?',
+    default: 'Open the README file in your preferred IDE.'
 },
 {
     type: 'input',
     name: 'contribution',
-    question: 'How would the user contribute to the project?',
+    message: 'How would the user contribute to the project?',
+    default: 'In the repo, click "Fork" to fork the repo.'
 },
 {
     type: 'input',
     name: 'test',
-    question: 'How would the user test the application',
+    message: 'How would the user test the application?',
+    default: 'Test it in your preferred application.'
 },
 {
     type: 'list',
     name: 'license',
-    question: "What license will be added?",
+    message: "What license will be added?",
     choices: ["MIT", "BSD", "GPL"],
+    default: "MIT"
 },
 {
     type: 'input',
     name: 'github',
-    question: 'What is your GitHub username?',
+    message: 'What is your GitHub username?',
+    default: 'spb71'
 },
 {
     type: 'input',
     name: 'email',
-    question: 'What is your email address?',
+    message: 'What is your email address?',
+    default: 'sos@fakemail.com'
 },];
 
 // TODO: Create a function to write README file
